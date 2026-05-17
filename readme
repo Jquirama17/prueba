@@ -1,0 +1,45 @@
+Estudiante: [Johan Quirama Acevedo]
+
+Curso: Telemática
+
+Docente: Carlos
+
+Descripción del Proyecto
+Este proyecto consiste en el diseño, documentación e implementación de un servicio telemático a nivel de producción. Utilice el juego interactivo Hangman-Game (Ahorcado) escrito en HTML5, CSS3 y JavaScript,
+
+Tecnologías Utilizadas
+Nginx (Alpine): Servidor web ligero para producción.
+
+Docker: Plataforma de contenedorización.
+
+AWS Academy (EC2 - Ubuntu): Servidor en la nube para producción.
+
+Git & GitHub: Control de versiones y trazabilidad.
+
+Estructura del Repositorio
+.
+├── Dockerfile
+├── README.md
+└── src/
+├── index.html
+├── css/
+├── js/
+└── assets/
+
+Guía de Despliegue en AWS (Paso a Paso)
+Actualización e Instalación de Docker:
+Conéctate por SSH a tu instancia de AWS y ejecuta:
+sudo apt update -y
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+
+Clonar el repositorio:
+git clone https://github.com/Jquirama17/prueba.git
+cd prueba
+
+Construir la imagen de Docker:
+sudo docker build -t ahorcado-app:v1 .
+
+Verificación:
+Ingresa la IP pública de tu AWS en cualquier navegador web para cargar el juego de inmediato.
